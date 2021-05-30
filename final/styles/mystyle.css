@@ -1,0 +1,344 @@
+/* styling the whole body */
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+/* styling the header in the index.html page */
+  h1 {
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    font-size: 50px;
+  
+  }
+/* styling the heading 'skincare is selface' */
+  div.ex1 {
+    padding: 50px; /* top,right,bottom,left */
+    /* border: 1px solid #ffffff; */
+    text-align: center;
+
+  }
+
+/* styling the paragraph in the index.html page*/
+  div.ex2 {
+    padding: 0px;
+    line-height: 24px;
+    box-sizing: border-box;
+    text-align: justify;
+    color: #fff;
+
+  }
+
+  div.ex3{
+    padding: 100px ;
+    text-align: center;
+    color: #fff;
+  
+  }
+
+/* styling the 'our products' h2 */
+  div.ex4 {
+    padding: 50px 350px 15px 350px; /* top,right,bottom,left */ /* changed the padding on the left to 350 from 450*/
+    border: 1px solid #ffffff;
+    text-align: center;
+  
+  }
+
+
+  div.ex5{
+      /* top,right,bottom,left */
+      text-align: center;
+      padding-left: 5%;
+    padding-right: 5%;
+      
+  }
+
+  
+/* deleted div ex3:hover */
+
+/* styles the list in the navigation bar across all page */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  
+  }
+  
+/* styles the list in the navigation bar */
+  li {
+    float: left;
+    border-right: 1px solid rgb(10, 0, 0);
+    overflow: hidden;
+    padding: 1px 1px 10px 1px;
+  
+  }
+ /* sstyling the list in the navigation bar */
+ /* sourced styling methids from: https://www.w3schools.com/howto/howto_js_topnav.asp */
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 13px 110px 10px 110px;
+    text-decoration: none;
+    overflow: hidden;
+  
+  }
+/* orange colour block when hovering across navigations */
+  li a:hover {
+    background-color: rgb(25, 41, 255);
+  }
+
+/* Create two equal columns that sits next to each other */
+/* sourced from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.column {
+  display: flex;
+  flex: 50%;
+  padding: 10px 10px 10px 10px; /* top,right,bottom,left */
+  justify-content: center;
+}
+
+/* sourced from: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.row {
+  display: flex ;
+  flex: 50%;
+  padding: 10px 10px 10px 10px; /* top,right,bottom,left */
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+
+}
+/* styling the explore button */
+.button {
+  background-color:  rgb(255, 255, 255);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.nav {
+  display: flex ;
+  /*flex: 50%;*/
+  padding: 10px 10px 10px 10px; /* top,right,bottom,left */
+  flex-direction: row;
+  /*width: 100%;*/
+  justify-content: space-between;
+
+}
+
+.nav li.brand img {
+  padding: 0 110px 10px 24px;
+}
+
+.space-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.space-between li{
+  display: flex;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+} 
+
+  .row1 {
+    display: flex ;
+    flex: 50%;
+    padding: 0px 10px 10px 10px; /* top,right,bottom,left */
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+/* styling for contact form sourced and adapted from week 8 tutorials */
+  fieldset {
+    margin: 3em;
+    padding: 2em;
+    color: rgb(255, 255, 255);
+  }
+  
+  input, textarea {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  
+  textarea {
+    height: 10em;
+  }
+  
+  #hint_email, #hint_subject, #hint_message {
+    color: red;
+    display: none;
+  }
+  
+  #loading, #success, #error {
+    display: none; 
+    text-align: center;
+    padding-top: 10em;
+  }
+
+  .image3 {
+    width: 350px;  
+
+   }
+
+   .image2, .image1 {
+    width: 100%;
+
+   }
+  
+  /* Code sourced and adapted from week 5 tutorials */
+  /* adding media settings to make the website responsive*/
+ 
+@media only screen and (min-width: 768px) {
+    /*tablets and desktop*/
+    .space-between{
+      width: 100%;
+    }
+    .space-between li{
+      justify-content: center;
+      /* padding: 0; */
+      text-align: center;
+    }
+
+    .space-between li a {
+      padding: 10px 20px 10px 20px;
+    }
+    
+    .nav li.brand img {
+      padding: 10px 20px 10px 20px;
+      width: 1.5em;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    /*phones */
+    .nav {
+      flex-direction: column;
+    }
+
+    .row {
+      flex-direction: column;
+      justify-content: space-around;
+      
+    }
+
+    .image3 {
+     width: 100%;  
+    }
+
+    .image2, .image1 {
+      width: 100%;  
+     }
+
+    .ex1 {
+      margin-bottom: 20px;
+    }
+
+    .ex1 .button {
+      margin-top: 24px;
+    }
+
+    .ex1 h1 {
+      font-size: 2em;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    div.ex1, div.ex2 {
+      padding: 5px;
+    }
+
+    .space-between{
+      flex-direction: column;
+    }
+    .space-between li{
+      justify-content: center;
+      padding: 0;
+    }
+
+    .nav li.brand img {
+      padding: 0 24px 10px 24px;
+    }
+    
+}
+
+
+    
+
+
+
+
+
+
+/* print styles sourced from https://www.sitepoint.com/css-printer-friendly-pages/*/
+@media print {
+
+  body {
+    margin: 0;
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+  }
+
+}
+
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.fa-twitter {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #020202;
+  color: white;
+  
+
+}
+
+
+
+
